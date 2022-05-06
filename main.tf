@@ -81,7 +81,7 @@ resource "azurerm_virtual_machine_scale_set" "vmss" {
   }
 
   # required when using rolling upgrade policy
-  health_probe_id = azurerm_lb_probe.example.id
+  health_probe_id = azurerm_lb_probe.healthprobe.id
 
   sku {
     name     = "Standard_DS1"
